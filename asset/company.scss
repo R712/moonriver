@@ -969,6 +969,12 @@ section {
                 font-size: 14px !important;
             }
         }
+        &.map {
+            .map-inner,
+            .map-desc {
+                width: 80%;
+            }
+        }
     }
     .gnb {
         z-index: 500;
@@ -1033,22 +1039,40 @@ section {
             }
         }
         &.is-open {
+            background: $c-white !important;
             &::before {
-                background: none;
+                background: $c-white;
             }
             nav {
                 top: 78px;
+                background: $c-white !important;
+                a {
+                    color: $c-brand;
+                    &:hover {
+                        background: none;
+                    }
+                }
             }
             h1 {
                 &::after {
                     top: 34px;
+                    background: $c-brand;
                     transform: rotate(45deg);
                 }
                 &::before {
                     top: 34px;
                     width: 20px;
+                    background: $c-brand;
                     transform: rotate(-45deg);
                 }
+            }
+        }
+        &.is-scroll {
+            &::before {
+                background: $c-white;
+            }
+            a {
+                color: $c-brand;
             }
         }
     }

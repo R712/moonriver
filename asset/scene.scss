@@ -47,6 +47,7 @@ body {
     cursor: default;
     overflow: auto;
     overflow-x: hidden;
+    word-break: keep-all;
 }
 
 input, pre, button {
@@ -763,7 +764,53 @@ section {
                 font-size: 32px !important;
             }
             p {
-                font-size: 14px !important;
+                font-size: 20px !important;
+            }
+        }
+        &.map {
+            padding: 60px 40px;
+            min-height: auto !important;
+            .map-inner,
+            .map-desc {
+                width: 100%;
+            }
+        }
+        &.scene[data-scene='3'] {
+            height: auto;
+            min-height: auto !important;
+            max-height: inherit !important;
+            .puzzle {
+                flex-direction: column !important;
+                > div {
+                    margin: 0;
+                    width: 100%;
+                }
+                .card {
+                    transform: none;
+                    margin: 0 auto;
+                    padding: 60px 40px;
+                    border-radius: 0;
+                    &:hover {
+                        transform: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+        &.scene[data-scene='4'] {
+            height: auto;
+            min-height: auto !important;
+            .interview,
+            .interview-control {
+                display: none;
+            }
+        }
+        .recruit {
+            margin: 0;
+            padding: 80px 40px;
+            border-radius: 0;
+            h4 {
+                font-size: 24px;
             }
         }
     }
@@ -830,22 +877,40 @@ section {
             }
         }
         &.is-open {
+            background: $c-white !important;
             &::before {
-                background: none;
+                background: $c-white;
             }
             nav {
                 top: 78px;
+                background: $c-white !important;
+                a {
+                    color: $c-brand;
+                    &:hover {
+                        background: none;
+                    }
+                }
             }
             h1 {
                 &::after {
                     top: 34px;
+                    background: $c-brand;
                     transform: rotate(45deg);
                 }
                 &::before {
                     top: 34px;
                     width: 20px;
+                    background: $c-brand;
                     transform: rotate(-45deg);
                 }
+            }
+        }
+        &.is-scroll {
+            &::before {
+                background: $c-white;
+            }
+            a {
+                color: $c-brand;
             }
         }
     }
@@ -866,22 +931,24 @@ section {
             width: 100vw !important;
         }
         .brand {
-            margin-bottom: 24px;
-            padding-bottom: 24px;
             width: 100%;
             max-width: 100%;
-            border-bottom: 1px solid $c-gray;
             p {
                 font-size: 14px !important;
             }
         }
+        .sitemap {
+            display: none;
+        }
+        .links {
+            flex-direction: column;
+        }
         nav {
             width: 100%;
             max-width: 100%;
-        }
-        nav:last-child a:last-child {
-            width: 100%;
-            text-align: center;
+            & + nav {
+                margin-top: 20px;
+            }
         }
     }
     .banner {
