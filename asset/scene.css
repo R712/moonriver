@@ -810,6 +810,12 @@ section .recruit button:hover {
   }
 }
 @media (max-width: 880px) {
+  .wow {
+    -webkit-animation: initial !important;
+            animation: initial !important;
+    -webkit-animation-play-state: paused !important;
+            animation-play-state: paused !important;
+  }
   body,
 .wrapper {
     min-width: 100vw;
@@ -837,6 +843,13 @@ section .recruit button:hover {
   section.map .map-inner,
 section.map .map-desc {
     width: 100%;
+  }
+  section .illust {
+    margin-left: -240px;
+    width: 480px;
+  }
+  section.scene[data-scene="1"] .msg {
+    margin-top: -360px;
   }
   section.scene[data-scene="3"] {
     height: auto;
@@ -973,6 +986,10 @@ section.scene[data-scene="4"] .interview-control {
   }
   .gnb.is-scroll a {
     color: #1A3997;
+  }
+  .gnb::before {
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
   }
   .msg a:last-child {
     margin-top: 20px !important;

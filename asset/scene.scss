@@ -750,6 +750,10 @@ section {
 //  반응형 대응
 //
 @media (max-width: 880px) {
+    .wow {
+        animation: initial !important;
+        animation-play-state: paused !important;
+    }
     body,
     .wrapper {
         min-width: 100vw;
@@ -775,6 +779,15 @@ section {
             .map-inner,
             .map-desc {
                 width: 100%;
+            }
+        }
+        .illust {
+            margin-left: -240px;
+            width: 480px;
+        }
+        &.scene[data-scene='1'] {
+            .msg {
+                margin-top: -360px;
             }
         }
         &.scene[data-scene='3'] {
@@ -914,6 +927,9 @@ section {
             a {
                 color: $c-brand;
             }
+        }
+        &::before {
+            backdrop-filter: none;
         }
     }
     .msg a:last-child {

@@ -608,11 +608,17 @@ section.hello::before {
   height: 100%;
   background: #E4F7FF;
 }
-section.hello strong {
+section.hello h4 {
   z-index: 1;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   margin-bottom: 24px;
-  font-size: 44px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.38;
 }
 section.hello div {
   z-index: 5;
@@ -622,9 +628,12 @@ section.hello div {
   align-items: center;
   justify-content: center;
 }
+section.hello .memoji {
+  width: 120px;
+}
 section.hello button {
-  margin: -40px 12px 0;
-  width: 180px;
+  margin: -24px 12px 0;
+  width: 240px;
   height: 60px;
   border-radius: 6px;
   border: 0;
@@ -963,9 +972,13 @@ section.map .map-inner {
   section .msg p {
     font-size: 14px !important;
   }
+  section.map {
+    padding: 60px 40px;
+    min-height: auto !important;
+  }
   section.map .map-inner,
 section.map .map-desc {
-    width: 80%;
+    width: 100%;
   }
   .gnb {
     z-index: 500;
@@ -1123,6 +1136,9 @@ section.map .map-desc {
     border-radius: 0 6px 6px 0;
   }
   .hello {
+    height: auto;
+    min-height: auto !important;
+    max-height: inherit !important;
     padding: 80px 60px !important;
   }
   .hello strong {
