@@ -273,6 +273,56 @@ section {
             }
         }
     }
+    &.team-intro {
+        min-height: 100vh;
+        height: 100%;
+        background: $c-dark;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: $c-white url('../img/bg-remotework.jpg') no-repeat fixed center;
+            background-size: cover;
+            opacity: .5;
+            animation: bgScale 10s infinite;
+            filter: blur(10px);
+        }
+        .msg {
+            margin-top: 20vh;
+            max-width: 720px;
+            min-height: 90vh;
+            color: $c-white;
+            strong {
+                font-size: 58px;
+                text-shadow: 0 1px 1px rgba($c-dark, .05), 0 24px 40px rgba($c-dark, .05);
+            }
+            p {
+                margin-top: 24px;
+                font-size: 22px;
+            }
+        }
+        .desc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 640px;
+            min-height: 800px;
+            color: $c-white;
+            font-size: 22px;
+            line-height: 1.48;
+            p {
+                text-align: center;
+            }
+            p + p {
+                margin: 40px 0 0;
+            }
+        }
+    }
     &.introduce {
         .partners {
             display: flex;
