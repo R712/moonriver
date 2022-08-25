@@ -976,9 +976,8 @@ section {
     section {
         min-height: 100vh !important;
         .msg {
-            padding: 0 0 12px !important;
             strong {
-                font-size: 32px !important;
+                font-size: 24px !important;
             }
             p {
                 font-size: 20px !important;
@@ -993,8 +992,8 @@ section {
             }
         }
         .illust {
-            margin-left: -240px;
-            width: 480px;
+            margin-left: -160px;
+            width: 360px;
         }
         .illust-desktop {
             bottom: -100px;
@@ -1003,8 +1002,34 @@ section {
             bottom: -80px;
         }
         &.scene[data-scene='1'] {
+            min-height: 100vh;
+            max-height: 100vh;
             .msg {
-                margin-top: -360px;
+                margin-top: -120px;
+                width: 100%;
+                em {
+                    font-size: 15px !important;
+                }
+                strong {
+                    font-weight: 500;
+                    font-size: 24px !important;
+                }
+                button {
+                    margin-top: 12px;
+                }
+            }
+        }
+        &.scene[data-scene='2'] {
+            height: auto;
+            min-height: auto !important;
+            max-height: inherit !important;
+            .msg {
+                padding: 80px 40px;
+                width: 100%;
+                p {
+                    font-weight: 500;
+                    font-size: 17px !important;
+                }
             }
         }
         &.scene[data-scene='3'] {

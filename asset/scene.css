@@ -1033,11 +1033,8 @@ section .recruit button:hover {
   section {
     min-height: 100vh !important;
   }
-  section .msg {
-    padding: 0 0 12px !important;
-  }
   section .msg strong {
-    font-size: 32px !important;
+    font-size: 24px !important;
   }
   section .msg p {
     font-size: 20px !important;
@@ -1051,8 +1048,8 @@ section.map .map-desc {
     width: 100%;
   }
   section .illust {
-    margin-left: -240px;
-    width: 480px;
+    margin-left: -160px;
+    width: 360px;
   }
   section .illust-desktop {
     bottom: -100px;
@@ -1060,8 +1057,36 @@ section.map .map-desc {
   section .illust-deco {
     bottom: -80px;
   }
+  section.scene[data-scene="1"] {
+    min-height: 100vh;
+    max-height: 100vh;
+  }
   section.scene[data-scene="1"] .msg {
-    margin-top: -360px;
+    margin-top: -120px;
+    width: 100%;
+  }
+  section.scene[data-scene="1"] .msg em {
+    font-size: 15px !important;
+  }
+  section.scene[data-scene="1"] .msg strong {
+    font-weight: 500;
+    font-size: 24px !important;
+  }
+  section.scene[data-scene="1"] .msg button {
+    margin-top: 12px;
+  }
+  section.scene[data-scene="2"] {
+    height: auto;
+    min-height: auto !important;
+    max-height: inherit !important;
+  }
+  section.scene[data-scene="2"] .msg {
+    padding: 80px 40px;
+    width: 100%;
+  }
+  section.scene[data-scene="2"] .msg p {
+    font-weight: 500;
+    font-size: 17px !important;
   }
   section.scene[data-scene="3"] {
     height: auto;
