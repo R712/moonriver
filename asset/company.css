@@ -181,6 +181,8 @@ section .btn-jump {
   position: absolute;
   left: 50%;
   bottom: 24px;
+  margin-left: -20px;
+  width: 40px;
   border: 0;
   background: none;
   color: rgba(0, 28, 52, 0.4);
