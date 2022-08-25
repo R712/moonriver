@@ -952,7 +952,7 @@ section.map .map-inner {
     overflow: hidden;
   }
   section {
-    min-height: 100vh !important;
+    min-height: 880px !important;
   }
   section .msg {
     padding: 40px !important;
@@ -1073,8 +1073,12 @@ section.map .map-desc {
   }
   .bubble .item {
     margin: 0 0 24px !important;
-    width: calc(100vw - 80px) !important;
     max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .bubble .item img {
+    padding: 0 !important;
+    width: 235px;
   }
   .media h3,
 .recruit h3 {
@@ -1147,22 +1151,24 @@ section.map .map-desc {
     width: 100vw !important;
   }
   .copyright .brand {
-    margin-bottom: 24px;
-    padding-bottom: 24px;
     width: 100%;
     max-width: 100%;
-    border-bottom: 1px solid rgba(0, 28, 52, 0.4);
   }
   .copyright .brand p {
     font-size: 14px !important;
+  }
+  .copyright .sitemap {
+    display: none;
+  }
+  .copyright .links {
+    flex-direction: column;
   }
   .copyright nav {
     width: 100%;
     max-width: 100%;
   }
-  .copyright nav:last-child a:last-child {
-    width: 100%;
-    text-align: center;
+  .copyright nav + nav {
+    margin-top: 20px;
   }
   .banner {
     display: none;

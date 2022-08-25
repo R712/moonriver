@@ -961,7 +961,7 @@ section {
         overflow: hidden;
     }
     section {
-        min-height: 100vh !important;
+        min-height: 880px !important;
         .msg {
             padding: 40px !important;
             strong {
@@ -1085,8 +1085,12 @@ section {
         flex-direction: column !important;
         .item {
             margin: 0 0 24px !important;
-            width: calc(100vw - 80px) !important;
             max-width: 100% !important;
+            padding: 0 !important;
+            img {
+                padding: 0 !important;
+                width: 235px;
+            }
         }
     }
     .media,
@@ -1159,22 +1163,24 @@ section {
             width: 100vw !important;
         }
         .brand {
-            margin-bottom: 24px;
-            padding-bottom: 24px;
             width: 100%;
             max-width: 100%;
-            border-bottom: 1px solid $c-gray;
             p {
                 font-size: 14px !important;
             }
         }
+        .sitemap {
+            display: none;
+        }
+        .links {
+            flex-direction: column;
+        }
         nav {
             width: 100%;
             max-width: 100%;
-        }
-        nav:last-child a:last-child {
-            width: 100%;
-            text-align: center;
+            & + nav {
+                margin-top: 20px;
+            }
         }
     }
     .banner {
