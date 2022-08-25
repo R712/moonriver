@@ -894,8 +894,8 @@ section.scene[data-scene="4"] .interview-control {
     display: block;
     padding-top: 0 !important;
     height: 78px;
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
   }
   .gnb h1 {
     position: relative;
