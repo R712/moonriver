@@ -1,18 +1,19 @@
 # 💙 moonriver
 
-official site
+Official site (desktop/mobile)
 
 ## 🌎 preview
-https://r712.github.io/moonriver/
-https://r712.github.io/moonriver/datacommerce.html
+- https://r712.github.io/moonriver/
+- https://r712.github.io/moonriver/datacommerce.html
 
 ## 👩🏻‍💻 used
 - scss (to css with VScode plugin)
 - html
-- javascript
+- some javascript
 - photo (from Unsplash)
 - webfont (spoqa han sans neo)
 - siema.js (interview slide) https://pawelgrzybek.github.io/siema/
+- wow.js (+ animate.css)
 
 ## history
 - add datacommerce page
