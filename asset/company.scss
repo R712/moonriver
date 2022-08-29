@@ -753,7 +753,7 @@ section {
             padding: 0 0 40px;
             width: 60%;
             max-width: 540px;
-            min-width: 320px;
+            min-width: 300px;
             h4 {
                 opacity: .6;
                 font-size: 28px;
@@ -1079,6 +1079,10 @@ section {
                 margin-top: 20px !important;
             }
         }
+        p {
+            word-break: keep-all;
+            text-align: center;
+        }
         .bubble {
             flex-direction: column !important;
             .item {
@@ -1108,7 +1112,7 @@ section {
             .news {
                 flex-direction: column;
                 padding: 0;
-                width: 100%;
+                width: 84vw;
                 div {
                     justify-content: space-between;
                     margin: 0;
@@ -1204,6 +1208,7 @@ section {
     .copyright {
         .inner {
             flex-direction: column;
+            padding: 60px 40px;
             width: 100vw !important;
         }
         .brand {

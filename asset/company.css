@@ -742,7 +742,7 @@ section.map .map-desc {
   padding: 0 0 40px;
   width: 60%;
   max-width: 540px;
-  min-width: 320px;
+  min-width: 300px;
 }
 section.map .map-desc h4 {
   opacity: 0.6;
@@ -1076,6 +1076,10 @@ section.map .map-inner {
   section .msg a:last-child {
     margin-top: 20px !important;
   }
+  section p {
+    word-break: keep-all;
+    text-align: center;
+  }
   section .bubble {
     flex-direction: column !important;
   }
@@ -1103,7 +1107,7 @@ section.map .map-inner {
   section.media .news {
     flex-direction: column;
     padding: 0;
-    width: 100%;
+    width: 84vw;
   }
   section.media .news div {
     justify-content: space-between;
@@ -1189,6 +1193,7 @@ section.map .map-desc {
   }
   .copyright .inner {
     flex-direction: column;
+    padding: 60px 40px;
     width: 100vw !important;
   }
   .copyright .brand {
