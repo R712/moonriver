@@ -150,10 +150,10 @@ input, pre, button {
 .gnb.is-scroll svg {
   fill: #1A3997;
 }
-.gnb.is-scroll a {
+.gnb.is-scroll nav a {
   color: #001C34;
 }
-.gnb.is-scroll a:hover {
+.gnb.is-scroll nav a:hover {
   background: #e8edfb;
 }
 .gnb.is-scroll::before {

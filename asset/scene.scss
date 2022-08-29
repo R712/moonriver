@@ -155,10 +155,12 @@ input, pre, button {
         svg {
             fill: $c-brand;
         }
-        a {
-            color: $c-dark;
-            &:hover {
-                background: lighten($c-brand, 60%);
+        nav {
+            a {
+                color: $c-dark;
+                &:hover {
+                    background: lighten($c-brand, 60%);
+                }
             }
         }
         &::before {
