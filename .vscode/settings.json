@@ -1,0 +1,17 @@
+{
+    "liveSassCompile.settings.excludeList": [
+        "expanded",
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/asset"
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "files.autoSave": "onWindowChange",
+    "compile-hero.disable-compile-files-on-did-save-code": false
+}

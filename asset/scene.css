@@ -441,47 +441,53 @@ section.scene[data-scene="4"] {
   background: #D4EBFF;
   color: #001C34;
 }
+section.scene[data-scene="4"] .hashtag {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 25px 20px;
+  max-width: 780px;
+  font-size: 15px;
+}
+section.scene[data-scene="4"] .hashtag span {
+  opacity: 0.6;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+section.scene[data-scene="4"] .hashtag span::before {
+  content: "#";
+}
+section.scene[data-scene="4"] .hashtag[data-hashtag="0"] [data-hashtag="0"], section.scene[data-scene="4"] .hashtag[data-hashtag="1"] [data-hashtag="1"], section.scene[data-scene="4"] .hashtag[data-hashtag="2"] [data-hashtag="2"] {
+  opacity: 1;
+  font-size: 18px;
+}
 section.scene[data-scene="4"] .interview {
   margin: 0 25px 80px;
-  max-width: 720px;
-  max-height: 400px !important;
+  max-width: 780px;
   transition: all 0.4s ease;
 }
-section.scene[data-scene="4"] .interview.is-full {
-  padding-bottom: 80px;
-  max-height: inherit !important;
-}
-section.scene[data-scene="4"] .interview .item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-section.scene[data-scene="4"] .interview .info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 16px 0 40px;
-  color: #001C34;
-  font-size: 20px;
-}
-section.scene[data-scene="4"] .interview .info em {
-  opacity: 0.6;
-  font-weight: 400;
-  font-size: 15px;
-  font-style: normal;
-}
-section.scene[data-scene="4"] .interview dl {
+section.scene[data-scene="4"] .interview .page {
   font-weight: 400;
   font-size: 16px;
   word-break: keep-all;
 }
-section.scene[data-scene="4"] .interview dt {
-  padding: 12px 0 10px;
-  border-top: 1px solid rgba(0, 28, 52, 0.08);
+section.scene[data-scene="4"] .interview .page label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
-section.scene[data-scene="4"] .interview dt::before {
+section.scene[data-scene="4"] .interview .page strong {
+  margin-top: 1px;
+  padding: 12px 16px 10px;
+  box-shadow: 0 1px rgba(0, 28, 52, 0.08);
+  background: #FFF;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+section.scene[data-scene="4"] .interview .page strong::before {
   content: "Q";
   display: inline-block;
   margin: 0 8px 0 0;
@@ -489,18 +495,36 @@ section.scene[data-scene="4"] .interview dt::before {
   color: #1A3997;
   text-align: center;
 }
-section.scene[data-scene="4"] .interview dd {
+section.scene[data-scene="4"] .interview .page div {
+  box-sizing: border-box;
   opacity: 0.8;
-  padding: 12px 0;
-  border-top: 1px solid rgba(0, 28, 52, 0.08);
+  max-height: 0;
+  padding: 0 16px;
+  transition: all 0.4s;
+  overflow: hidden;
 }
-section.scene[data-scene="4"] .interview dd::before {
+section.scene[data-scene="4"] .interview .page div::before {
   content: "A";
   display: inline-block;
   margin: 0 8px 0 0;
   width: 16px;
   text-align: center;
   color: #9AA4AE;
+}
+section.scene[data-scene="4"] .interview .page input {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+section.scene[data-scene="4"] .interview .page input:checked ~ strong {
+  border-radius: 6px 6px 0 0;
+  font-weight: 600;
+}
+section.scene[data-scene="4"] .interview .page input:checked ~ div {
+  max-height: inherit;
+  padding: 16px;
+  background: #FFF;
+  border-radius: 0 0 6px 6px;
 }
 section.scene[data-scene="4"] .interview-blind {
   position: relative;
@@ -541,44 +565,60 @@ section.scene[data-scene="4"] .interview-choose {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 150px 0 0;
+  padding: 150px 0 20px;
+  overflow: hidden;
 }
-section.scene[data-scene="4"] .interview-choose button {
-  opacity: 0.4;
+section.scene[data-scene="4"] .interview-choose .btn-interview {
+  opacity: 0.6;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 12px;
+  width: 128px;
+  height: 200px;
+  border: 0;
+  background: #D4EBFF;
+  line-height: 1.48;
+  overflow: hidden;
+  cursor: pointer;
+}
+section.scene[data-scene="4"] .interview-choose .btn-interview strong {
+  padding-top: 16px;
+  color: #001C34;
+  font-size: 18px;
+}
+section.scene[data-scene="4"] .interview-choose .btn-interview em {
+  opacity: 0.6;
+  font-weight: 400;
+  font-size: 15px;
+  font-style: normal;
+  white-space: nowrap;
+}
+section.scene[data-scene="4"] .interview-choose .btn-interview::before {
+  content: "";
+  mix-blend-mode: luminosity;
   width: 100px;
   height: 100px;
-  border: 0;
-  background: #FFF no-repeat center;
-  background-size: 120px;
-  text-indent: -9999px;
-  cursor: pointer;
-  filter: grayscale(100);
-  border-radius: 50%;
+  background: url("../who/ckj.png") no-repeat center;
+  background-size: 100px;
   overflow: hidden;
+  border-radius: 50%;
+  transition: all 0.4s;
 }
-section.scene[data-scene="4"] .interview-choose button.is-selected {
-  opacity: 1;
-  filter: none;
-}
-section.scene[data-scene="4"] .interview-choose button[data-interview="0"] {
-  background-image: url("../who/ckj.png");
-}
-section.scene[data-scene="4"] .interview-choose button[data-interview="0"].is-selected {
-  margin-left: 260px;
-}
-section.scene[data-scene="4"] .interview-choose button[data-interview="1"] {
+section.scene[data-scene="4"] .interview-choose .btn-interview[data-interview="1"]::before {
   background-image: url("../who/ysi.png");
 }
-section.scene[data-scene="4"] .interview-choose button[data-interview="2"] {
+section.scene[data-scene="4"] .interview-choose .btn-interview[data-interview="2"]::before {
   background-image: url("../who/ksh.png");
 }
-section.scene[data-scene="4"] .interview-choose button[data-interview="2"].is-selected {
-  margin-right: 260px;
+section.scene[data-scene="4"] .interview-choose .btn-interview.is-selected {
+  opacity: 1;
+}
+section.scene[data-scene="4"] .interview-choose .btn-interview.is-selected::before {
+  mix-blend-mode: normal;
+  transform: scale(1.1);
 }
 section.scene[data-scene="4"] .interview-control {
   position: absolute;
@@ -1160,4 +1200,4 @@ section.map .map-desc {
   .copyright nav + nav {
     margin-top: 20px;
   }
-}/*# sourceMappingURL=scene.css.map */
+}

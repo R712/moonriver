@@ -416,64 +416,92 @@ section {
             max-height: inherit;
             background: $c-bg;
             color: $c-dark;
-            .interview {
-                margin: 0 25px 80px;
-                max-width: 720px;
-                max-height: 400px !important;
-                transition: all .4s ease;
-                &.is-full {
-                    padding-bottom: 80px;
-                    max-height: inherit !important;
-                }
-                .item {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-                .info {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    margin: 16px 0 40px;
-                    color: $c-dark;
-                    font-size: 20px;
-                    em {
-                        opacity: .6;
-                        font-weight: 400;
-                        font-size: 15px;
-                        font-style: normal;
+            .hashtag {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                margin: 0 25px 20px;
+                max-width: 780px;
+                font-size: 15px;
+                span {
+                    opacity: .6;
+                    padding: 8px 12px;
+                    white-space: nowrap;
+                    &::before {
+                        content: '#';
                     }
                 }
-                dl {
+                &[data-hashtag='0'] [data-hashtag='0'],
+                &[data-hashtag='1'] [data-hashtag='1'],
+                &[data-hashtag='2'] [data-hashtag='2'] {
+                    opacity: 1;
+                    font-size: 18px;
+                }
+            }
+            .interview {
+                margin: 0 25px 80px;
+                max-width: 780px;
+                transition: all .4s ease;
+                .page {
                     font-weight: 400;
                     font-size: 16px;
                     word-break: keep-all;
-                }
-                dt {
-                    padding: 12px 0 10px;
-                    border-top: 1px solid $c-border;
-                    &::before {
-                        content: 'Q';
-                        display: inline-block;
-                        margin: 0 8px 0 0;
-                        width: 16px;
-                        color: $c-brand;
-                        text-align: center;
+                    label {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
                     }
-                }
-                dd {
-                    opacity: .8;
-                    padding: 12px 0;
-                    border-top: 1px solid $c-border;
-                    &::before {
-                        content: 'A';
-                        display: inline-block;
-                        margin: 0 8px 0 0;
-                        width: 16px;
-                        text-align: center;
-                        color: $c-gray;
+                    strong {
+                        margin-top: 1px;
+                        padding: 12px 16px 10px;
+                        box-shadow: 0 1px rgba($c-dark, .08);
+                        background: $c-white;
+                        font-weight: 400;
+                        font-size: 18px;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        &::before {
+                            content: 'Q';
+                            display: inline-block;
+                            margin: 0 8px 0 0;
+                            width: 16px;
+                            color: $c-brand;
+                            text-align: center;
+                        }
+                    }
+                    div {
+                        box-sizing: border-box;
+                        opacity: .8;
+                        max-height: 0;
+                        padding: 0 16px;
+                        transition: all .4s;
+                        overflow: hidden;
+                        &::before {
+                            content: 'A';
+                            display: inline-block;
+                            margin: 0 8px 0 0;
+                            width: 16px;
+                            text-align: center;
+                            color: $c-gray;
+                        }
+                    }
+                    input {
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                    }
+                    input:checked {
+                        & ~ strong {
+                            border-radius: 6px 6px 0 0;
+                            font-weight: 600;
+                        }
+                        & ~ div {
+                            max-height: inherit;
+                            padding: 16px;
+                            background: $c-white;
+                            border-radius: 0 0 6px 6px;
+                        }
                     }
                 }
             }
@@ -516,41 +544,57 @@ section {
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                padding: 150px 0 0;
-                button {
-                    opacity: .4;
+                padding: 150px 0 20px;
+                overflow: hidden;
+                .btn-interview {
+                    opacity: .6;
+                    position: relative;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
                     margin: 0 12px;
-                    width: 100px;
-                    height: 100px;
+                    width: 128px;
+                    height: 200px;
                     border: 0;
-                    background: $c-white no-repeat center;
-                    background-size: 120px;
-                    text-indent: -9999px;
-                    cursor: pointer;
-                    filter: grayscale(100);
-                    border-radius: 50%;
+                    background: $c-bg;
+                    line-height: 1.48;
                     overflow: hidden;
-                    &.is-selected {
-                        opacity: 1;
-                        filter: none;
+                    cursor: pointer;
+                    strong {
+                        padding-top: 16px;
+                        color: $c-dark;
+                        font-size: 18px;
                     }
-                    &[data-interview='0'] {
-                        background-image: url('../who/ckj.png');
-                        &.is-selected {
-                            margin-left: 260px;
-                        }
+                    em {
+                        opacity: .6;
+                        font-weight: 400;
+                        font-size: 15px;
+                        font-style: normal;
+                        white-space: nowrap;
                     }
-                    &[data-interview='1'] {
+                    &::before {
+                        content: '';
+                        mix-blend-mode: luminosity;
+                        width: 100px;
+                        height: 100px;
+                        background: url('../who/ckj.png') no-repeat center;
+                        background-size: 100px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        transition: all .4s;
+                    }
+                    &[data-interview='1']::before {
                         background-image: url('../who/ysi.png');
                     }
-                    &[data-interview='2'] {
+                    &[data-interview='2']::before {
                         background-image: url('../who/ksh.png');
-                        &.is-selected {
-                            margin-right: 260px;
+                    }
+                    &.is-selected {
+                        opacity: 1;
+                        &::before {
+                            mix-blend-mode: normal;
+                            transform: scale(1.1);
                         }
                     }
                 }
