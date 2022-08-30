@@ -429,6 +429,7 @@ section {
                     padding: 0 12px;
                     line-height: 36px;
                     white-space: nowrap;
+                    cursor: pointer;
                     transition: all .4s;
                     &::before {
                         content: '#';

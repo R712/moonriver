@@ -376,6 +376,21 @@ interviewList.onclick = e => {
     }
 }
 
+hashtagList.onclick = e => {
+    const id = e.target.dataset.hashtag;
+    hashtagList.dataset.hashtag = id;
+    if (id) {
+        interviewBtn.forEach(btn => {
+            btn.classList.remove('is-selected');
+        });
+        const fillBtn = document.querySelector('.btn-interview[data-interview="'+ id +'"]');
+        fillBtn.classList.add('is-selected');
+        Interview.goTo(id);
+    } else {
+        e.preventDefault();
+    }
+}
+
 </script>
 
 </body>

@@ -455,6 +455,7 @@ section.scene[data-scene="4"] .hashtag span {
   padding: 0 12px;
   line-height: 36px;
   white-space: nowrap;
+  cursor: pointer;
   transition: all 0.4s;
 }
 section.scene[data-scene="4"] .hashtag span::before {
