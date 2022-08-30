@@ -452,15 +452,30 @@ section.scene[data-scene="4"] .hashtag {
 }
 section.scene[data-scene="4"] .hashtag span {
   opacity: 0.6;
-  padding: 8px 12px;
+  padding: 0 12px;
+  line-height: 36px;
   white-space: nowrap;
+  transition: all 0.4s;
 }
 section.scene[data-scene="4"] .hashtag span::before {
   content: "#";
 }
+section.scene[data-scene="4"] .hashtag span:hover {
+  font-size: 17px;
+}
 section.scene[data-scene="4"] .hashtag[data-hashtag="0"] [data-hashtag="0"], section.scene[data-scene="4"] .hashtag[data-hashtag="1"] [data-hashtag="1"], section.scene[data-scene="4"] .hashtag[data-hashtag="2"] [data-hashtag="2"] {
   opacity: 1;
   font-size: 18px;
+}
+section.scene[data-scene="4"] .hashtag[data-hashtag="0"] [data-hashtag="0"]:hover, section.scene[data-scene="4"] .hashtag[data-hashtag="1"] [data-hashtag="1"]:hover, section.scene[data-scene="4"] .hashtag[data-hashtag="2"] [data-hashtag="2"]:hover {
+  font-size: 20px;
+}
+section.scene[data-scene="4"] .hashtag[data-hashtag="0"] [data-hashtag="1"], section.scene[data-scene="4"] .hashtag[data-hashtag="1"] [data-hashtag="2"], section.scene[data-scene="4"] .hashtag[data-hashtag="2"] [data-hashtag="0"] {
+  opacity: 0.4;
+  font-size: 14px;
+}
+section.scene[data-scene="4"] .hashtag[data-hashtag="0"] [data-hashtag="1"]:hover, section.scene[data-scene="4"] .hashtag[data-hashtag="1"] [data-hashtag="2"]:hover, section.scene[data-scene="4"] .hashtag[data-hashtag="2"] [data-hashtag="0"]:hover {
+  font-size: 16px;
 }
 section.scene[data-scene="4"] .interview {
   margin: 0 25px 80px;

@@ -426,10 +426,15 @@ section {
                 font-size: 15px;
                 span {
                     opacity: .6;
-                    padding: 8px 12px;
+                    padding: 0 12px;
+                    line-height: 36px;
                     white-space: nowrap;
+                    transition: all .4s;
                     &::before {
                         content: '#';
+                    }
+                    &:hover {
+                        font-size: 17px;
                     }
                 }
                 &[data-hashtag='0'] [data-hashtag='0'],
@@ -437,6 +442,18 @@ section {
                 &[data-hashtag='2'] [data-hashtag='2'] {
                     opacity: 1;
                     font-size: 18px;
+                    &:hover {
+                        font-size: 20px;
+                    }
+                }
+                &[data-hashtag='0'] [data-hashtag='1'],
+                &[data-hashtag='1'] [data-hashtag='2'],
+                &[data-hashtag='2'] [data-hashtag='0'] {
+                    opacity: .4;
+                    font-size: 14px;
+                    &:hover {
+                        font-size: 16px;
+                    }
                 }
             }
             .interview {
