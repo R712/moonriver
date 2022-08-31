@@ -4,7 +4,7 @@ Official site (desktop/mobile)
 
 ## 🌎 preview
 - https://r712.github.io/moonriver/
-- https://r712.github.io/moonriver/datacommerce.html
+- https://r712.github.io/moonriver/datacommerce/
 
 ## 👩🏻‍💻 used
 - scss (to css with VScode plugin)
