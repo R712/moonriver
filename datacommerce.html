@@ -127,17 +127,17 @@
         </div>
         <div class="hashtag" data-hashtag="0">
             <span class="hashtag-item" data-hashtag="0">대표입니다만</span>
-            <span class="hashtag-item" data-hashtag="1">같이일할사람</span>
             <span class="hashtag-item" data-hashtag="2">히트메이커</span>
             <span class="hashtag-item" data-hashtag="1">새로운도전</span>
             <span class="hashtag-item" data-hashtag="2">이직상담환영</span>
+            <span class="hashtag-item" data-hashtag="0">프로전략가</span>
             <span class="hashtag-item" data-hashtag="1">증권가이단아</span>
             <span class="hashtag-item" data-hashtag="0">사람보는눈</span>
             <span class="hashtag-item" data-hashtag="1">키워드로투자한다</span>
             <span class="hashtag-item" data-hashtag="1">우상향요정</span>
-            <span class="hashtag-item" data-hashtag="0">진짜가정적</span>
+            <span class="hashtag-item" data-hashtag="0">이커머스금융</span>
             <span class="hashtag-item" data-hashtag="1">자율재택근무짱</span>
-            <span class="hashtag-item" data-hashtag="2">디지털노마드</span>
+            <span class="hashtag-item" data-hashtag="2">커머스볼모지</span>
         </div>
         <div class="interview">
             <div class="page">
@@ -364,12 +364,12 @@ const hashtagList = document.querySelector('.hashtag');
 
 interviewList.onclick = e => {
     const id = e.target.dataset.interview;
-    hashtagList.dataset.hashtag = id;
     if (id) {
         interviewBtn.forEach(btn => {
             btn.classList.remove('is-selected');
         });
         e.target.classList.add('is-selected');
+        hashtagList.dataset.hashtag = id;
         Interview.goTo(id);
     } else {
         e.preventDefault();

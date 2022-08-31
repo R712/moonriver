@@ -378,6 +378,7 @@ section.scene[data-scene="2"] .msg:hover p:hover {
   opacity: 1;
 }
 section.scene[data-scene="3"] {
+  padding: 60px 40px;
   background: #1A3997;
 }
 section.scene[data-scene="3"] .puzzle {

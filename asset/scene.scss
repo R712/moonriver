@@ -354,6 +354,7 @@ section {
             }
         }
         &[data-scene='3'] {
+            padding: 60px 40px;
             background: $c-brand;
             .puzzle {
                 z-index: 1;
