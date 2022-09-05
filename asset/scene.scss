@@ -784,7 +784,8 @@ section {
         color: $c-gray;
         font-weight: 400;
         svg {
-             width: 180px;
+            width: 120px;
+            fill: $c-gray;
         }
         strong {
             color: $c-gray;
@@ -792,8 +793,21 @@ section {
             font-size: 24px;
         }
         h6 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
             font-weight: 700;
             font-size: 22px;
+        }
+        span {
+            padding-top: 6px;
+            font-size: 18px;
+            &::before {
+                content: '×';
+                padding: 0 6px;
+                font-weight: 300;
+                font-size: 14px;
+            }
         }
         p {
             margin-top: 16px;

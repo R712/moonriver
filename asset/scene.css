@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("font.scss");
 @import url("animate.css");
 input:focus {
@@ -798,7 +799,8 @@ section .recruit button:hover {
   font-weight: 400;
 }
 .copyright .brand svg {
-  width: 180px;
+  width: 120px;
+  fill: #9AA4AE;
 }
 .copyright .brand strong {
   color: #9AA4AE;
@@ -806,8 +808,21 @@ section .recruit button:hover {
   font-size: 24px;
 }
 .copyright .brand h6 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-weight: 700;
   font-size: 22px;
+}
+.copyright .brand span {
+  padding-top: 6px;
+  font-size: 18px;
+}
+.copyright .brand span::before {
+  content: "×";
+  padding: 0 6px;
+  font-weight: 300;
+  font-size: 14px;
 }
 .copyright .brand p {
   margin-top: 16px;
